@@ -43,32 +43,31 @@
         
     
 
-
-
-
-
-
     <script type="text/javascript">
 
-    var count= new Date("Jan 1,2021 00:00:00").getTime()
-    var x=setInterval(function() {
-        var now= new Date().getTime();
-       var d=count - now;
+        var count = new Date("Jan 1,2021 00:00:00").getTime()
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var d = count - now;
 
-       var day= Math.floor(d/(1000*60*60*24));
-       var hour= Math.floor((d%(1000*60*60*24)) /(1000*60*60));
-       var minute= Math.floor((d%(1000*60*60)) / (1000*60));
-       var second= Math.floor((d%(1000*60))/ 1000);
+            var day = Math.floor(d / (1000 * 60 * 60 * 24));
+            var hour = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minute = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+            var second = Math.floor((d % (1000 * 60)) / 1000);
 
-       document.getElementById("day").innerHTML= day;
-       document.getElementById("hour").innerHTML= hour;
-       document.getElementById("minute").innerHTML= minute;
-       document.getElementById("second").innerHTML= second;
-       if(d<=0)
-       {
-          clearInterval(x); 
-       }
-    },1000);
+            document.getElementById("day").innerHTML = day;
+            document.getElementById("hour").innerHTML = hour;
+            document.getElementById("minute").innerHTML = minute;
+            document.getElementById("second").innerHTML = second;
+            if (d <= 0) {
+                clearInterval(x);
+            }
+        }, 1000);
+
+
+
+
+    
 
  
 
